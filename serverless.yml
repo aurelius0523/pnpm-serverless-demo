@@ -1,0 +1,17 @@
+service: pnpm-serverless-demo
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: ap-southeast-1
+  runtime: nodejs16.x
+
+functions:
+  quotes:
+    handler: src/handler.getQuote
+
+plugins:
+  - serverless-esbuild
+
+package:
+  excludeDevDependencies: false # disable sls built-in option to exclude dev dependencies
