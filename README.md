@@ -16,7 +16,6 @@ sls deploy # Look at bundled .js inside .serverless folder
 - `serverless-typescript-plugin` converts tscode to js but does not do bundling. Requires eiher `serverless-plugin-include-dependencies` (includes node_modules) or `serverless-esbuild` (bundler like webpack but faster)
 
 ## Problems faced
---- 
 ### `pnpm` does not work with `serverless-plugin-typescript` by default
 
 - When using `pnpm` with `serverless`, transitive dependencies (e.g., `form-data` that axios needs) is not included in final bundle by default
